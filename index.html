@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="HeadGAP">
+  <meta name="keywords" content="Hand Avatar">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HeadGAP</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/favicon.ico">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://pengfeiren96.github.io/DIR/">
+            Decoupled Iterative Refinement Framework for Interacting Hands Reconstruction from a Single RGB Image
+          </a>
+          <a class="navbar-item" href="https://zxz267.github.io/AvatarJLM/">
+            Realistic Full-Body Tracking from Sparse Observations via Joint-Level Modeling
+          </a>
+          <a class="navbar-item" href="https://zxz267.github.io/HaMuCo/">
+            HaMuCo: Hand Pose Estimation via Multiview Collaborative Self-Supervised Learning
+          </a>
+          <a class="navbar-item" href="https://zxz267.github.io/OHTA/">
+            OHTA: One-shot Hand Avatar via Data-driven Implicit Priors
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-widescreen">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Head<span class="g-text">G</span><span class="a-text">A</span><span class="p-text">P</span>: Few-shot 3D Head Avatar via <br>Generalizable <span class="g-text">G</span><span class="a-text">A</span>ussian <span class="p-text">P</span>riors</h1>
+          <!-- <h2 class="title publication-title is-4 has-text-grey"></h2> -->
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=3hSD41oAAAAJ">Xiaozheng Zheng<sup>1</sup></a>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=v8TFZI4AAAAJ">Chao Wen<sup>1</sup></a>,
+            </span>
+            <span class="author-block">
+              <a href="#">Zhaohu Li<sup>1</sup></a>,
+            </span>
+            <span class="author-block">
+              <a href="#">Weiyi Zhang<sup>1</sup></a>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=iaqDkqMAAAAJ">Zhuo Su<sup>1</sup></a>,
+            </span>
+            <span class="author-block">
+              <a href="#">Xu Chang<sup>1</sup></a>,
+            </span>
+            <br>
+            <span class="author-block">
+              <a href="#">Yang Zhao<sup>1</sup></a>,
+            </span>
+            <span class="author-block">
+              <a href="#">Zheng Lv<sup>1</sup></a>,
+            </span>
+            <span class="author-block">
+              <a href="#">Xiaoyuan Zhang<sup>1</sup></a>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations&user=bs5YPmMAAAAJ">Yongjie Zhang<sup>1</sup></a>,
+            </span>
+            <span class="author-block">
+              <a href="#">Guidong Wang<sup>1</sup></a>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=aPS5pJkAAAAJ">Lan Xu<sup>2</sup></a>,
+            </span>
+          </div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>ByteDance</span>
+            <br>
+            <span class="author-block"><sup>2</sup>ShanghaiTech University</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+             <span class="link-block">
+               <a href="#"
+                  class="external-link button is-normal is-rounded is-dark">
+                 <span class="icon">
+                     <i class="fas fa-file-pdf"></i>
+                 </span>
+                 <span>Paper</span>
+               </a>
+             </span>
+              <span class="link-block">
+                <a href="#"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="#"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-widescreen">
+    <div class="hero-body">
+      <div class="is-centered">
+      <img src="./static/images/teaser.jpg" width="1200px"/>
+      </div>
+      <h2 class="subtitle has-text-centered">
+        We present an approach to creating photo-realistic animatable 3D head avatars from only a few or even one image of the target person.
+        <br><br>
+      </h2>
+
+    </div>
+  </div>
+</section>
+
+
+<div class="columns is-centered has-text-centered">
+  <h2 class="title is-3">Video Results</h2>
+</div>
+
+
+<div class="columns is-centered has-text-centered">
+  <h2 class="title is-4">3-shot</h2>
+</div>
+
+
+<section class="hero is-light is-small">
+  
+  <div class="hero-body">
+    <div class="container">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-4">Cross-reenactment Results</h2>
+      </div>
+    </div>
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item">
+          <video poster="" id="c1" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/cross/cross-part1.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+
+        <div class="item">
+          <video poster="" id="c4" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/cross/cross-part4.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+
+        <div class="item">
+          <video poster="" id="c2" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/cross/cross-part2.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video poster="" id="c3" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/cross/cross-part3.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-4">Self-reenactment Results</h2>
+        </div>
+      </div>
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item">
+          <video poster="" id="074" controls muted loop playsinline height="100%">
+            <source src="./static/videos/self/074.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video poster="" id="175" controls muted loop playsinline height="100%">
+            <source src="./static/videos/self/175.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video poster="" id="210" controls muted loop playsinline height="100%">
+            <source src="./static/videos/self/210.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video poster="" id="252" controls muted loop playsinline height="100%">
+            <source src="./static/videos/self/252.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video poster="" id="254" controls muted loop playsinline height="100%">
+            <source src="./static/videos/self/254.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item">
+          <video poster="" id="256" controls muted loop playsinline height="100%">
+            <source src="./static/videos/self/256.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video poster="" id="257" controls muted loop playsinline height="100%">
+            <source src="./static/videos/self/257.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video poster="" id="258" controls muted loop playsinline height="100%">
+            <source src="./static/videos/self/258.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video poster="" id="259" controls muted loop playsinline height="100%">
+            <source src="./static/videos/self/259.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video poster="" id="260" controls muted loop playsinline height="100%">
+            <source src="./static/videos/self/260.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item">
+          <video poster="" id="261" controls muted loop playsinline height="100%">
+            <source src="./static/videos/self/261.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video poster="" id="314" controls muted loop playsinline height="100%">
+            <source src="./static/videos/self/314.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video poster="" id="262" controls muted loop playsinline height="100%">
+            <source src="./static/videos/self/262.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video poster="" id="317" controls muted loop playsinline height="100%">
+            <source src="./static/videos/self/317.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video poster="" id="263" controls muted loop playsinline height="100%">
+            <source src="./static/videos/self/263.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            In this paper, we present a novel 3D head avatar creation approach capable of generalizing from few-shot in-the-wild data with high-fidelity and animatable robustness.
+            Given the underconstrained nature of this problem, incorporating prior knowledge is essential. Therefore, we propose a framework comprising prior learning and avatar creation phases.
+            The prior learning phase leverages 3D head priors derived from a large-scale multi-view dynamic dataset, and the avatar creation phase applies these priors for few-shot personalization.
+            Our approach effectively captures these priors by utilizing a Gaussian Splatting-based auto-decoder network with part-based dynamic modeling.
+            Our method employs identity-shared encoding with personalized latent codes for individual identities to learn the attributes of Gaussian primitives.
+            During the avatar creation phase, we achieve fast head avatar personalization by leveraging inversion and fine-tuning strategies.
+            Extensive experiments demonstrate that our model effectively exploits head priors and successfully generalizes them to few-shot personalization, achieving photo-realistic rendering quality, multi-view consistency, and stable animation.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <!-- <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="#" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div> -->
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Animation. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">HeadGAP framework</h2>
+
+        <div class="columns is-vcentered interpolation-panel">
+            <img src="./static/images/framework_only.jpg"
+                 class="network-image"
+                 alt="Ours framework."/>
+            
+          </div>
+          <div style="text-align: center;">
+            (1)The prior learning phase uses different IDs' data to embed head priors into the GAPNet.
+            (2)The personalization phase firstly optimizes identity codes to obtain the inverted avatar, then updates the GAPNet to get the fine-tuned avatar.
+          </div>
+        </div>
+        <br/>
+      </div>
+    </div>
+    <!--/ Animation. -->
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Animation. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Network Architecture</h2>
+
+        <div class="columns is-vcentered interpolation-panel">
+            <img src="./static/images/GAPNet.jpg"
+                 class="network-image"
+                 alt="Ours pipeline."/>
+          </div>
+        </div>
+        <br/>
+      </div>
+    </div>
+    <!--/ Animation. -->
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Results</h2>
+        <h3 class="title is-4">Our 3-shot results on NeRSemble and in-house dataset</h3>
+        <div class="columns is-vcentered interpolation-panel">
+          <img src="./static/images/cross-reenectment.jpg"
+               class="interpolation-image"
+               alt="Ours vs. state-of-the-art methods on InterHand2.6M."/>
+        </div>
+        <br>
+        <h3 class="title is-4">In-the-wild 3-shot results</h3>
+        <div class="columns is-vcentered in-the-wild-image">
+          <img src="./static/images/phone-captured.jpg"
+               alt="Ours in-the-wild results."/>
+        </div>
+        
+        <h2 class="title is-3">Applications</h2>
+        <h3 class="title is-4">Texture Interpolation & Texture Swapping</h3>
+        <div class="columns is-vcentered interpolation-panel">
+          <img src="./static/images/application.jpg"
+                class="interpolation-image"
+                alt="Texture Interpolation & Texture Swapping."/>
+        </div>
+        <!-- <video id="teaser" autoplay muted loop height="100%">
+          <source src="./static/videos/iccv-hamuco.mp4" type="video/mp4">
+        </video> -->
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>
+      @article{zheng2024headgap,
+      title={HeadGAP: Few-shot 3D Head Avatar via Generalizable Gaussian Priors},
+      author={Zheng, Xiaozheng and Wen, Chao and Li, Zhaohu and Zhang, Weiyi and Su, Zhuo and Chang, Xu and Zhao, Yang and Lv, Zheng and Zhang, Xiaoyuan and Zhang, Yongjie and Wang, Guidong and Xu Lan},
+      journal={arXiv preprint arXiv:24xx.xxxxx},
+      year={2024}}
+    </code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This means you are free to borrow the <a
+              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
+            we just ask that you link back to this page in the footer.
+            Please remember to remove the analytics code included in the header of the website which
+            you do not want on your website.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

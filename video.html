@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>懒加载视频示例</title>
+    <style>
+        .video-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .video-placeholder {
+            width: 100%;
+            height: auto;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+        .video-placeholder img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="video-container">
+        <div class="video-placeholder" data-video-src="https://example.com/video.mp4">
+            <img src="https://placehold.co/600x400" alt="点击加载视频">
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const placeholder = document.querySelector('.video-placeholder');
+            const videoSrc = placeholder.getAttribute('data-video-src');
+
+            placeholder.addEventListener('click', function() {
+                const video = document.createElement('video');
+                video.src = videoSrc;
+                video.controls = true;
+                video.style.width = '100%';
+                
+                placeholder.parentNode.replaceChild(video, placeholder);
+                video.play();
+            });
+
+            // 使用 Intersection Observer API 进行视口检测
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // 预加载视频
+                        const link = document.createElement('link');
+                        link.rel = 'preload';
+                        link.as = 'video';
+                        link.href = videoSrc;
+                        document.head.appendChild(link);
+                        
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            observer.observe(placeholder);
+        });
+    </script>
+</body>
+</html>
